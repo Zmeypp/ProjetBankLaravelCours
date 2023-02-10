@@ -36,11 +36,16 @@
                 <div class="mb-3" style="width: 50%; text-align: center; margin: auto;">
                     <label for="password" class="form-label">Select your bank</label>
                     <br />
-                    <select>
+                    <select name="bank" id="bank">
                         @foreach ($banks as $bank)
                             <option value="{{ $bank->id }}">{{$bank->libelle}}</option>
                         @endforeach
                     </select>
+                </div>
+
+                <div class="mb-3" style="width: 50%; text-align: center; margin: auto;">
+                    <label for="balance" class="form-label">Select amount of your account</label>
+                    <input type="text" name="balance" class="form-control" id="balance" rows="3" placeholder="65230">
                 </div>
 
                 
